@@ -3,12 +3,9 @@ package BasicCorePrograms;
 import java.util.Scanner;
 
 public class HarmonicNumber {
-	public static void main(String[] args) {
+	public static float calcHarmonic(int N) {
 		
-		Scanner sc = new Scanner(System.in);
 		float result = 0;
-		System.out.print("Enter Harmonic value : ");
-		int N = sc.nextInt();
 		if(N != 0) {
 			
 			for(int i= 1; i<= N; i++) {
@@ -19,7 +16,15 @@ public class HarmonicNumber {
 		else {
 			System.out.println("Invalid Input");
 		}
-		System.out.printf("Sum of Harmonic value : %.2f " , result);
+		return result;
+	}
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Harmonic value : ");
+		int N = sc.nextInt();
+		float value = calcHarmonic(N);
+		System.out.printf("Sum of Harmonic value : %.2f " , value );
 		sc.close();
 	}
 
