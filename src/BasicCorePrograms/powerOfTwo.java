@@ -3,12 +3,9 @@ package BasicCorePrograms;
 //import java.util.Scanner;
 
 public class powerOfTwo {
-	public static void main(String[] args) {
+	public static void calcPowerOfTwo(int N) {
 		
 		int power = 1;
-		//read input using command line argument
-		//convert command line argument to integer
-		int N =Integer.parseInt(args[0]);
 		//for testing
 //		Scanner sc = new Scanner(System.in);
 //		System.out.print("Enter the limit ");
@@ -21,6 +18,14 @@ public class powerOfTwo {
                 power = (2 * power) ;
             }
         }
+	}
+	public static void main(String[] args) {
+		
+		
+		//read input using command line argument
+		//convert command line argument to integer
+		int N =Integer.parseInt(args[0]);
+		calcPowerOfTwo(N);
 	}
 
 }
